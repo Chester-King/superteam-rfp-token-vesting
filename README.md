@@ -1,66 +1,52 @@
-# Token Vesting Program on Solana Tutorial
+# Token Vesting Program Tutorial
+
+The Token Vesting program is a smart contract built on the Solana blockchain that enables the creation of time-based vesting schedules for tokens. This tutorial will guide you through the process of setting up and using the Token Vesting program, catering to users with different levels of expertise.
 
 ## Table of Contents
-
 1. [Introduction](#introduction)
 2. [Prerequisites](#prerequisites)
-3. [Setting Up the Development Environment](#setting-up-the-development-environment)
-4. [Smart Contract Design](#smart-contract-design)
-5. [Deploying the Token Vesting Contract](#deploying-the-token-vesting-contract)
-6. [Testing the Token Vesting Contract](#testing-the-token-vesting-contract)
-7. [Integration and Usage](#integration-and-usage)
-8. [Best Practices and Security Considerations](#best-practices-and-security-considerations)
-9. [Conclusion](#conclusion)
-10. [Additional Resources](#additional-resources)
+3. [Installation](#installation)
+4. [Usage](#usage)
 
 ## Introduction
 
-- Overview of token vesting and its importance
-- Explanation of how token vesting works on the Solana blockchain
+The Token Vesting program allows you to lock tokens in an escrow account and define a specific unlock time. This ensures that the tokens are not accessible until the unlock time is reached. Once the unlock time arrives, the authorized recipient can withdraw the tokens from the escrow account.
 
 ## Prerequisites
 
-- List of prerequisites, such as basic knowledge of Solana and programming skills
-- Links to any required installations or setups
+Before you can use the Token Vesting program, make sure you have the following prerequisites:
 
-## Setting Up the Development Environment
+- Basic knowledge of the Solana blockchain ecosystem.
+- Familiarity with Rust programming language.
+- Installed Rust, Solana, Anchor, and the Solana Token Program.
 
-- Step-by-step instructions for setting up the development environment
-- Installation of Solana command-line tools and dependencies
-- Configuration and initialization of the Solana project
+## Installation
 
-## Smart Contract Design
+To get started with the Token Vesting program, follow these steps:
 
-- Explanation of the design considerations for a token vesting contract on Solana
-- Description of the contract structure and storage requirements
-- Implementation details and code snippets
+1. Clone the Token Vesting repository:
 
-## Deploying the Token Vesting Contract
+```shell
+git clone [repository-url]
+cd token-vesting
+```
 
-- Instructions on deploying the smart contract to the Solana blockchain
-- Guidance on interacting with Solana's deployment tools (e.g., Solana CLI or web-based interfaces)
+2. Build the program:
 
-## Testing the Token Vesting Contract
+```shell
+anchor build
+```
 
-- Steps to test the functionality and behavior of the vesting contract
-- Example test cases and expected outcomes
+3. Deploy the program to the Solana blockchain:
 
-## Integration and Usage
+```shell
+anchor deploy
+```
 
-- Guidance on integrating the token vesting contract into an application or ecosystem
-- Instructions on interacting with the contract, including vesting schedules and token transfers
+## Usage 
 
-## Best Practices and Security Considerations
+The Token Vesting program provides two main methods for interacting with the escrow accounts:
 
-- Recommendations for best practices when designing and using token vesting contracts
-- Security considerations to prevent vulnerabilities and protect user funds
+1. `escrow_creation`: Creates an escrow account and locks the specified amount of tokens until the unlock time.
+2. `escrow_withdraw`: Allows the authorized recipient to withdraw tokens from the escrow account after the unlock time.
 
-## Conclusion
-
-- Recap of the tutorial's key points
-- Encouragement for further exploration and experimentation
-
-## Additional Resources
-
-- Links to relevant Solana documentation, developer resources, and community channels
-- References to external tutorials, examples, or real-world implementations
