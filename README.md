@@ -27,8 +27,8 @@ To get started with the Token Vesting program, follow these steps:
 1. Clone the Token Vesting repository:
 
 ```shell
-git clone [repository-url]
-cd token-vesting
+git clone https://github.com/Chester-King/superteam-rfp-token-vesting.git
+cd superteam-rfp-token-vesting
 ```
 
 2. Build the program:
